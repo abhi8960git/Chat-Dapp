@@ -33,7 +33,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [openModel, setOpenModel] = useState(false);
 
-  const { account, userName, connectWallet, createAccount, error, emergency,FetchEmergencyData,
+  const { account, userName, connectWallet, createAccount, error, emergency, FetchEmergencyData,
     ShowEmergencyData,
     EmergencyResponse, } =
     useContext(ChatAppContect);
@@ -43,19 +43,19 @@ const NavBar = () => {
         <p className={Style.text}>{emergency}</p>
 
         <div className={Style.Button}>
-          <button onClick={()=>{
+          <button onClick={() => {
             FetchEmergencyData()
           }} className={Style.button}>FetchEmergencyData</button>
           <button
-          onClick={()=>{
-            ShowEmergencyData()
-          }}
-           className={Style.button} >Show EmergencyData</button>
+            onClick={() => {
+              ShowEmergencyData()
+            }}
+            className={Style.button} >Show EmergencyData</button>
           <button
-          onClick={()=>{
-            EmergencyResponse()
-          }}
-           className={Style.button}>RepondToEmergency</button>
+            onClick={() => {
+              EmergencyResponse()
+            }}
+            className={Style.button}>RepondToEmergency</button>
         </div>
       </div>
       <div className={Style.NavBar}>
@@ -149,9 +149,9 @@ const NavBar = () => {
           <div className={Style.modelBox}>
             <Model
               openBox={setOpenModel}
-              title="WELCOME TO"
-              head="CHAT BUDDY"
-              info="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate maxime assumenda exercitationem voluptatibus, vero aliquid in tempore aut, impedit dolores voluptate recusandae nulla fuga? Praesentium iusto mollitia sint fugit! Placeat?"
+              title="Welcome to"
+              head="Emergency Connect"
+              info="EmergencyConnect leverages Chainlink's oracle network and AI to enhance emergency response. Chainlink's decentralized oracle seamlessly connects smart contracts to external APIs, providing real-time emergency data for AI algorithms. This empowers rapid response, maximizing volunteer efforts and ensuring accurate information exchange. Revolutionizing emergency systems through AI and Chainlink's reliability."
               smallInfo="Kindley seclet your name..."
               image={images.hero}
               functionName={createAccount}
